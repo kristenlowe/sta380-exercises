@@ -1,6 +1,6 @@
 ---
 title: "Probability Practice"
-author: "Kristen Lowe"
+author: "Kristen Lowe and Siboney Cardoso"
 date: "2024-08-07"
 output: html_document
 ---

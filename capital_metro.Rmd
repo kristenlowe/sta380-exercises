@@ -1,0 +1,38 @@
+---
+title: 'Visual story telling part 2: Capital Metro data'
+author: "Kristen Lowe"
+date: "2024-08-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, message=FALSE}
+library(tidyverse)
+```
+
+```{r}
+capmetro <- read_csv('data/capmetro_UT.csv', show_col_types = FALSE)
+
+capmetro_by_date <- capmetro %>%
+  mutate(date = as_date(timestamp)) %>% 
+  group_by(date, day_of_week, month, weekend) %>%
+  summarise(total_boarding = sum(boarding),
+            total_alighting = sum(alighting),
+            avg_temp = mean(temperature),
+            .groups = 'drop') 
+
+capmetro_by_date %>% 
+  ggplot(aes(x = avg_temp, y = total_boarding, color = weekend)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE) +
+  theme_minimal() +
+  labs(x = "Average Temperature",
+       y = "Total Number of Passengers",
+       title = "Daily Temperatures vs Number of Passengers by Weekday/Weekend") +
+  guides(color = guide_legend(title = NULL))
+```
+
+This scatter plot shows the relationship between average daily temperature and the total number of passengers on that day. The color differentiation between weekdays and weekends allows us to see how temperature increases ridership more on weekdays compared to weekends.

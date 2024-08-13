@@ -1,6 +1,6 @@
 ---
 title: 'Visual story telling part 2: Capital Metro data'
-author: "Kristen Lowe"
+author: "Kristen Lowe and Siboney Cardoso"
 date: "2024-08-07"
 output: html_document
 ---

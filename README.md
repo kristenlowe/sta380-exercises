@@ -14,4 +14,4 @@ The Reuters corpus
 
 Association rule mining
 
-Image classification with neural networks
+[Image classification with neural networks](https://github.com/kristenlowe/sta380_exercises/blob/main/image_classification_neural_nets.ipynb)

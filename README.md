@@ -12,6 +12,6 @@
 
 The Reuters corpus
 
-Association rule mining
+[Association rule mining](https://github.com/kristenlowe/sta380_exercises/blob/main/association_rule_mining.Rmd)
 
 [Image classification with neural networks](https://github.com/kristenlowe/sta380_exercises/blob/main/image_classification_neural_nets.ipynb)

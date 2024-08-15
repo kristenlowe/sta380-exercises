@@ -28,9 +28,6 @@ The Reuters corpus
 
 1. **Explore Solutions:** Click on the links to view the code for each exercise.
 
-3. **View Analysis:**
+2. **View Analysis:**
    - **RMarkdown:** Download and run the `.Rmd` files to view the outputs. For your convenience, PDF versions with outputs are also available in the `knit` folder.
    - **Jupyter Notebook:** Open the `.ipynb` files to view the outputs directly.
-
-4. **Get Data:** All files used in these exercises can be found in the `data` folder.
-

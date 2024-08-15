@@ -1,6 +1,10 @@
 # STA 380 Exercises
 
-## Group members: Kristen Lowe and Siboney Cardoso
+## Group members
+Kristen Lowe
+Siboney Cardoso
+
+## Solutions
 
 [Probability practice](https://github.com/kristenlowe/sta380_exercises/blob/main/probability_practice.Rmd)
 

@@ -1,0 +1,62 @@
+---
+title: "Association rule mining"
+author: "Siboney Cardoso"
+date: "2024-08-14"
+output: html_document
+---
+
+### Association rule mining
+
+Revisit the notes on association rule mining and the R example on music playlists: playlists.R and playlists.csv. Then use the data on grocery purchases in groceries.txt and find some interesting association rules for these shopping baskets. The data file is a list of shopping baskets: one person's basket for each row, with multiple items per row separated by commas. Pick your own thresholds for lift and confidence; just be clear what these thresholds are and say why you picked them. Do your discovered item sets make sense? Present your discoveries in an interesting and visually appealing way.
+
+```{r}
+
+# Load necessary libraries
+library(tidyverse)
+library(igraph)
+library(arules)
+library(arulesViz)
+
+# Groceries dataset file path
+file_path <- "C:/Users/Siboney Cardoso/OneDrive/STA380/groceries.txt"
+
+# Read transactions
+groceries_raw <- read.transactions(file_path, format = "basket", sep = ",")
+
+# Run the apriori algorithm on the transaction data
+grocery_rules <- apriori(groceries_raw, 
+                         parameter=list(support=.005, confidence=.1, maxlen=4))
+
+# arules package
+arules::inspect(grocery_rules)
+
+
+# Convert rules to data frame
+grocery_rules_df <- as(grocery_rules, "data.frame")
+
+# Inspect the first few rules
+head(grocery_rules_df)
+
+# Subset rules based on lift
+high_lift_rules <- subset(grocery_rules_df, lift > 5)
+high_confidence_rules <- subset(grocery_rules_df, confidence > 0.6)
+high_lift_confidence_rules <- subset(grocery_rules_df, lift > 10 & confidence > 0.5)
+
+# Inspect the subsets
+head(high_lift_rules)
+head(high_confidence_rules)
+head(high_lift_confidence_rules)
+
+# Plot the rules in (support, confidence) space
+plot(grocery_rules)
+
+# Alternative plots
+plot(grocery_rules, measure = c("support", "lift"), shading = "confidence")
+plot(grocery_rules, method='two-key plot')
+
+# Graph-based visualization
+grocery_graph <- associations2igraph(subset(grocery_rules, lift > 4), associationsAsNodes = FALSE)
+igraph::write_graph(grocery_graph, file='grocery_rules.graphml', format = "graphml")
+```
+
+The analysis of grocery shopping patterns revealed strong connections between certain items, particularly those involving root vegetables, fruits, and whole milk. For example, when shoppers buy root vegetables along with citrus or tropical fruits, there is a significantly higher likelihood that they will also purchase other vegetables, with a lift exceeding 3. Additionally, for lifts above 2, products like butter, whipped/sour cream, and eggs are bought together with whole milk. Therefore, it's recommended to implement cross promotions and store layouts that place vegetables with fruits or dairy products close to each other to encourage sales. This approach will help increase overall sales.

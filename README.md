@@ -1,6 +1,6 @@
 # STA 380 Exercises
 
-## Group members
+## Group Members
 Kristen Lowe  
 Siboney Cardoso
 

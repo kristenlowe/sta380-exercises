@@ -1,3 +1,9 @@
+# STA 380 Exercises
+
+## Group members:
+###Kristen Lowe
+###Siboney Cardoso
+
 [Probability practice](https://github.com/kristenlowe/sta380_exercises/blob/main/probability_practice.Rmd)
 
 [Wrangling the Billboard Top 100](https://github.com/kristenlowe/sta380_exercises/blob/main/wrangling_billboard_top_100.Rmd)

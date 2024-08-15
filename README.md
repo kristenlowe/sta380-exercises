@@ -25,8 +25,10 @@ The Reuters corpus
 [Image classification with neural networks](https://github.com/kristenlowe/sta380_exercises/blob/main/image_classification_neural_nets.ipynb)
 
 ## How to Navigate This Repository
-1. **Explore Solutions: Click on the links to view our code for each exercise.**
+
+1. **Explore Solutions:** Click on the links to view the code for each exercise.
 2. **View Analysis:**
-   1. RMarkdown: .Rmd files need to be downloaded and run to view the outputs. For your convenience, we have also provided pdf versions in the knit folder.
-   2. Jupyter notebook: .ipynb files show the outputs.
-3. **Get Data: All of the files used in these exercises are located in the data folder.**
+   1. **RMarkdown:** Download and run the `.Rmd` files to view the outputs. For your convenience, PDF versions with outputs are also available in the `knit` folder.
+   2. **Jupyter Notebook:** Open the `.ipynb` files to view the outputs directly.
+3. **Get Data:** All files used in these exercises can be found in the `data` folder.
+

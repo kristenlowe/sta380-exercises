@@ -1,6 +1,6 @@
 ---
 title: "Association rule mining"
-author: "Siboney Cardoso"
+author: "Siboney Cardoso and Kristen Lowe"
 date: "2024-08-14"
 output: html_document
 ---
@@ -18,7 +18,7 @@ library(arules)
 library(arulesViz)
 
 # Groceries dataset file path
-file_path <- "C:/Users/Siboney Cardoso/OneDrive/STA380/groceries.txt"
+file_path <- "data/groceries.txt"
 
 # Read transactions
 groceries_raw <- read.transactions(file_path, format = "basket", sep = ",")

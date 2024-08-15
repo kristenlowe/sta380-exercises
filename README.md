@@ -1,8 +1,7 @@
 # STA 380 Exercises
 
 ## Group members
-Kristen Lowe
-
+Kristen Lowe  
 Siboney Cardoso
 
 ## Solutions

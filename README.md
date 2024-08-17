@@ -18,7 +18,7 @@ Siboney Cardoso (sc64835)
 
 [Market segmentation](https://github.com/kristenlowe/sta380_exercises/blob/main/market_segmentation.Rmd)
 
-The Reuters corpus
+[The Reuters corpus](https://github.com/kristenlowe/sta380_exercises/blob/main/reuters_corpus.ipynb)
 
 [Association rule mining](https://github.com/kristenlowe/sta380_exercises/blob/main/association_rule_mining.Rmd)
 
